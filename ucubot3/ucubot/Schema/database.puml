@@ -1,0 +1,10 @@
+@startuml
+
+class LessonSignal {
+long Id
+DateTime Timestamp
+int SignalType 
+string UserId
+}
+
+@enduml

@@ -1,0 +1,8 @@
+FROM microsoft/aspnetcore-build:2.0 AS build-env
+
+ADD . /app
+WORKDIR /app/usubot.End2EndTests
+
+RUN dotnet restore
+
+ENTRYPOINT ["dotnet", "test", "-v", "m", "--filter", "TestCategory=Assignment3"]
